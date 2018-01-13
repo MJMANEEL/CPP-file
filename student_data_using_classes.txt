@@ -1,0 +1,20 @@
+//getting roll no. and name of a student using classes.
+#include <iostream>
+using namespace std;
+class student {
+public:
+    int a;
+    char b[500];
+
+    get();
+};
+    int student::get() {
+        cin >> a >> b;
+    }
+int main()
+{
+    student s;
+    s.get();
+    cout<<s.a<<"\n"<<s.b;
+    return 0;
+}
