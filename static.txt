@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+//int count;
+class test{
+	int no;
+	static int count;
+	int p;
+	public:
+		void getval(int);
+		void dispcount(void);
+};
+void test::getval(int x){
+	
+	no=x;
+	cout<<"\nno:"<<no;
+	count++	;
+	p++;
+}
+void test::dispcount(void)
+{
+	cout<<"\nconter"<<count<<endl;
+	cout<<"p:"<<p;
+}
+int test::count;
+int main(){
+	test t1,t2,t3;
+	t1.dispcount();
+	t2.dispcount();
+	t3.dispcount();
+	
+	t1.getval(100);
+	t2.getval(200);
+	t3.getval(300);
+    
+	t1.dispcount();
+	t2.dispcount();
+	t3.dispcount();
+  
+}
