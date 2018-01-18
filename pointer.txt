@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class student{
+	public:
+		int roll,marks;
+		char name[30];
+};
+void display(student *s)
+{
+
+	cout<<"name:"<<s->name<<endl<<"roll:"<<s->roll<<endl<<"marks:"<<s->marks<<endl;
+}
+int main()
+{
+	student *s=new student;
+	cout<<"enter roll number";
+	cin>>s->roll;
+	cout<<"enter marks";
+	cin>>s->marks;
+	cout<<"enter name";
+	cin>>s->name;
+	display(s);
+}
