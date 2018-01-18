@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+class call{
+	public:
+	call(char select,int a,int b,int c,int d)
+	{
+		if(select=='+')
+	{
+		cout<<a+c<<"+i"<<b+d;
+	}
+	else if(select=='-')
+	{
+		cout<<a-c<<"(+i)"<<b-d;
+	}
+	else if(select=='*')
+	{
+	cout<<(a*c-b*d)<<"(+i)"<<(a*d+b*c);
+	}
+	else
+	{
+		cout<<(a*c+b*d)/(c*c+d*d)<<("+i")<<(b*c-a*d)/(c*c+d*d);
+	}
+	}
+};
+int main()
+{
+	char select;
+	cin>>select;
+	int a,b,c,d;
+	cin>>a>>b>>c>>d;
+    call(select,a,b,c,d);
+	return 0;
+
+}
